@@ -1,0 +1,22 @@
+{
+  "timeout": 10,
+  "log": {
+    "path": "./go-vhostd.log",
+    "level": "DEBUG",
+    "verbose": true,
+    "rotate": true,
+    "rotation": {
+      "size": 100000000,
+      "compress": 1,
+      "max_files_keep": 10
+    }
+  },
+  "certificate": "./MyCertificate.crt",
+  "key": "./MyKey.key",
+  "vhosts": [
+    {
+      "vhost": "example.com",
+      "host": "127.0.0.1:8081"
+    }
+  ]
+}
